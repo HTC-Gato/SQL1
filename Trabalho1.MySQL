@@ -1,0 +1,12 @@
+CREATE TABLE cargo(
+codigo int primary key auto_increment,
+nome varchar (200) not null unique
+);
+CREATE TABLE departamento (
+    codigo int primary key auto_increment,
+    nome varchar(200) not null unique
+);
+CREATE TABLE cliente(
+    codigo int primary key auto_increment,
+    nome varchar (200) not null unique
+);
