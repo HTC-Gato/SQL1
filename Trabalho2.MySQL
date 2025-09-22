@@ -1,0 +1,20 @@
+CREATE TABLE projeto(
+codigo int primary key auto_increment,
+nome varchar (300) not null,
+dt_inicio DATE not null,
+dt_termino DATE not null,
+orcamento NUMERIC(10,2),
+Codigo.Cliente int not null,
+FOREIGN key (Codigo.Cliente),
+    Referencias Cliente(Codigo)
+);
+CREATE TABLE funcionario (
+    codigo int primary key auto_increment,
+    nome varchar(200) not null,
+    salario NUMERIC(10,4) not null,
+    admissao date not null,
+    Codigo_cargo int not null,
+    Codigo_dpto int not null,
+    FOREIGN KEY (Codigo_cargo) references cargo(codigo),
+    FOREIGN KEY (Codigo_dpto) references departamento(codigo),
+);
