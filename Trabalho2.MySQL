@@ -18,3 +18,12 @@ CREATE TABLE funcionario (
     FOREIGN KEY (Codigo_cargo) references cargo(codigo),
     FOREIGN KEY (Codigo_dpto) references departamento(codigo),
 );
+CREATE TABLE projeto(
+codigo int primary key auto_increment,
+qtd_horas int not null,
+dt_inicio DATE not null,
+Codigo_projeto int not null,
+Codigo_funcionario int not null,
+FOREIGN key (Codigo_projeto) references projeto(codigo),
+FOREIGN key (Codigo_funcionario) References funcionario(Codigo)
+);
